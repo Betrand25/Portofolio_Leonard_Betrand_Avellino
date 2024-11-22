@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js" type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "Nbo99FnideoYPlhel",
+          });
+       })();
+    </script>
+</head>
+<body>
+    <header class="headerr">
+        <div class="header">
+            <ul class="nav-menu">
+                <li><a href="index.html">About</a></li>
+                <li><a href="portofolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-box">
+            <!-- Kotak pertama (Kiri) -->
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>I will read all emails. Send me any message you want, and I will get back to you.</p>
+                <p>I need your name and email address, but you won’t receive anything other than my reply.</p>
+                <div class="social-box">
+                    <p class="p1">Does not send emails</p>
+                    <p class="p2">Write me on my social</p>
+                    <p class="p2">network</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/leonard-betrand-a-625308325/"><img src="Assset/ikon/linkin-removebg-preview.png" alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com/betrand_25/profilecard/?igsh=NGdjdmh0eXMzY3Jy"><img src="Assset/ikon/instagram-removebg-preview.png" alt="Instagram"></a>
+                        <a href="https://github.com/Betrand25"><img src="Assset/ikon/github-removebg-preview.png" alt="GitHub"></a>    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kotak kedua (Kanan) -->
+            <div class="contact-form">
+                <h2>Send Me a Message</h2>
+                <form id="contact-form" onsubmit="SendMail(); return false;">
+                    <div class="input-group">
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <textarea id="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" id="send-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bubble animation will be added here -->
+    <div id="bubble-container"></div>
+    <script src="bubble.js"></script>
+</body>
+</html>

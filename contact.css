@@ -1,0 +1,336 @@
+@font-face {
+    font-family: myfont;
+    src: url(Assset/Font/ADLaMDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: myfont2;
+    src: url(Assset/Font/Adamina-Regular.ttf);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    color: #fff;
+    font-family: myfont2;
+    background-color: #1C2020;
+    overflow: hidden;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    background-color: #1C2020;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu li a {
+    color: #686161;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li a[href="contact.html"] {
+    color: #fff;
+}
+
+.nav-menu li a:hover {
+    color: #32a852;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    width: 35%;
+    background-color: #2E3232;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;
+    border-bottom: #0E4701 solid 4px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: myfont;
+    color:#09962c;
+}
+
+.contact-info p {
+    font-size: 18px;
+    font-family: myfont;
+}
+
+.social-box {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 5px;
+    border-top: 2px solid #09962c;
+}
+
+.p1, .p2 {
+    font-size: 25px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #39FF14;
+    border-radius: 50%;
+    background-size: 60%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    width: 50%;
+    background-color: #1F2323;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: myfont;
+    text-align: center;
+}
+
+.contact-form .input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #1C2020;
+    border: 2px solid #32a852;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0E4701;
+}
+
+.contact-form button {
+    background-color: #0E4701;
+    border: none;
+    padding: 8px 30px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin-right: 200px;
+}
+
+.contact-form button:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+/* Bubble Animation */
+@keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.2);
+    }
+}
+  
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(13, 227, 81, 0.1);
+    border-radius: 50%;
+    animation: float 10s infinite ease-in;
+    z-index: -1; /* Pastikan bubble di layer paling belakang */
+}
+  
+/* Mengatur warna bubble menggunakan nth-child */
+.bubble:nth-child(even) {
+    background-color: rgba(14, 71, 1, 0.7); /* Warna #0E4701 */
+}
+  
+.bubble:nth-child(odd) {
+    background-color: rgba(116, 206, 96, 0.7); /* Warna #74CE60 */
+}
+  
+.bubble:nth-child(2) {
+    left: 20%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+  
+.bubble:nth-child(3) {
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+  
+.bubble:nth-child(4) {
+    left: 80%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 8s;
+    animation-delay: 0.5s;
+}
+
+@media only screen and (max-width: 430px) {
+    /* Adjust body padding/margin */
+    body {
+        padding: 0 10px;
+    }
+
+   /* Header adjustments */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    padding: 10px 0;
+    width: 100%; /* Ensure header takes full width */
+}
+
+/* Navigation menu adjustments */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Align the items to the right */
+    gap: 20px; /* Add space between the navigation links */
+    align-items: center;
+    margin-right: 20px;
+    margin-right: 100px; /* Add some margin to the right side */
+}
+
+    .nav-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu li a {
+        font-size: 18px;
+    }
+
+       /* Mengatur ulang tata letak section contact */
+       .contact-section {
+        flex-direction: column; /* Mengatur tata letak vertikal */
+    }
+
+    /* Menyesuaikan layout kotak contact */
+    .contact-box {
+        flex-direction: column;
+        flex-direction: column-reverse; /* Ubah menjadi vertikal */
+        width: 100%; /* Pastikan kotak mengambil seluruh lebar */
+    }
+
+    /* Mengatur ulang posisi contact-info */
+    .contact-info {
+        width: 100%; /* Pastikan kotak mengisi seluruh lebar */
+        margin-left: 0; /* Hapus margin kiri */
+        margin-top: 10px;
+        text-align: center; /* Pusatkan teks */
+    }
+
+    /* Mengatur ulang posisi contact-form */
+    .contact-form {
+        width: 100%; /* Ambil seluruh lebar layar */
+        margin-bottom: 20px;
+    }
+
+    /* Mengatur posisi tombol send a message */
+    .contact-form button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Social Box berada di bawah contact form */
+    .social-box {
+        margin-top: 30px; /* Memberi spasi antara kotak-kotak */
+        text-align: center;
+    }
+
+
+
+}
