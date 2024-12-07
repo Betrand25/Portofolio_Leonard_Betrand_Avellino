@@ -381,7 +381,7 @@ body {
  /* Icon container for mobile view */
  .icon-container2 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 2 columns in mobile */
+    grid-template-columns: repeat(6, 1fr); /* 2 columns in mobile */
     gap: 15px; /* Spacing between icons */
     justify-content: center;
     align-items: center;
