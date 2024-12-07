@@ -347,7 +347,7 @@ body {
 @media only screen and (max-width: 430px) {
     /* Adjust body padding/margin */
     body {
-        padding: 0px;
+        padding: 0;
     }
 
    /* Header adjustments */
